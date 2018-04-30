@@ -1,0 +1,44 @@
+<html ng-app="fibonacci">
+   <head>
+      <title>Palindrome String</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/prime-number.css">
+   </head>
+   <body>
+         <br><br>
+      <div class="row">
+         <br><br>
+         <div class=" col-lg-6 col-md-6 " style="margin: auto">
+            
+             <div class="card">
+               <h3 class="card-header bg-primary text-white">Fibonacci series</h3>
+
+                <div class="card-body" ng-controller="FibonacciController as fibonacciCtrl" >
+                  <form name="primeForm" ng-submit="primeForm.$valid && fibonacciCtrl.genFibonacci()" novalidate>
+                     <label class="control-label text-secondary">Enter number till which you want fibonacci<span class="text-danger">*</span></label>
+                     
+                     <input type="number" ng-model="fibonacciCtrl.num" class="form-control"  required>
+                     <br>
+                     <button type="submit" class="btn btn-warning float-right">Check</button>
+
+                     <br><br>
+                     <strong class="text-secondary">Result</strong><br>
+                     <h5>{{fibonacciCtrl.result}}</h5>
+                     <p>{{fibonacciCtrl.not}}</p>
+
+                  </form>
+               </div>
+         
+            </div>
+         </div>
+      </div>
+      
+      
+      <script src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/angular.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/fibonacci.js"></script>
+   </body>
+
+</html>
